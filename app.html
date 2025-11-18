@@ -1,0 +1,52 @@
+<div style="position: fixed; top: 10px; right: 10px; z-index: 9999; background: white; padding: 10px; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); max-height: 90vh; overflow-y: auto;">
+  <label><strong>🔐 Select User (RLS Test):</strong></label><br>
+  <select id="user-select" style="margin: 5px 0; padding: 5px; width: 280px;">
+    <optgroup label="🌍 Country Sales Reps">
+      <option value="john_usa">John (USA only)</option>
+      <option value="marie_france">Marie (France only)</option>
+      <option value="yuki_japan">Yuki (Japan only)</option>
+      <option value="hans_germany">Hans (Germany only)</option>
+      <option value="sophia_spain">Sophia (Spain only)</option>
+    </optgroup>
+    <optgroup label="🌏 Regional Managers">
+      <option value="manager_apac">Manager APAC</option>
+      <option value="manager_emea">Manager EMEA</option>
+      <option value="manager_japan">Manager Japan</option>
+    </optgroup>
+    <optgroup label="🚗 Product Line - Vehicles">
+      <option value="motorcycles_sales">🏍️ Motorcycles Sales</option>
+      <option value="classic_cars_sales">🚗 Classic Cars Sales</option>
+      <option value="vintage_cars_sales">🚙 Vintage Cars Sales</option>
+      <option value="trucks_buses_sales">🚚 Trucks & Buses Sales</option>
+    </optgroup>
+    <optgroup label="✈️ Product Line - Transportation">
+      <option value="planes_sales">✈️ Planes Sales</option>
+      <option value="ships_sales">🚢 Ships Sales</option>
+      <option value="trains_sales">🚂 Trains Sales</option>
+    </optgroup>
+    <optgroup label="💰 Deal Size">
+      <option value="large_deals">💎 Large Deals Only</option>
+      <option value="medium_deals">💵 Medium Deals Only</option>
+      <option value="small_deals">💰 Small Deals Only</option>
+      <option value="small_medium">💵💰 Small + Medium</option>
+    </optgroup>
+    <optgroup label="🔀 Multiple Conditions">
+      <option value="japan_motorcycles">🇯🇵 Japan + Motorcycles</option>
+      <option value="usa_large">🇺🇸 USA + Large Deals</option>
+      <option value="emea_classic_cars">🌍 EMEA + Classic Cars</option>
+      <option value="france_large">🇫🇷 France + Large Deals</option>
+    </optgroup>
+    <optgroup label="🚙 Multiple Product Lines">
+      <option value="vehicles_only">🚗 Vehicles Only (Cars/Motorcycles/Trucks)</option>
+      <option value="transport_only">✈️ Transportation Only (Planes/Ships/Trains)</option>
+    </optgroup>
+    <optgroup label="👑 Admin">
+      <option value="admin" selected>👑 Admin (All Data)</option>
+    </optgroup>
+  </select>
+  <button id="reload-btn" style="padding: 5px 15px; margin-top: 5px; cursor: pointer; background: #1890ff; color: white; border: none; border-radius: 4px; width: 100%;">🔄 Reload Dashboard</button>
+  <div id="current-user" style="margin-top: 10px; padding: 8px; background: #f0f0f0; border-radius: 4px; font-size: 12px; color: #333;">
+    <strong>Current User:</strong> <span id="user-name">admin</span>
+  </div>
+</div>
+<div id="superset-container"></div>
